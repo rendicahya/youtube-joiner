@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "youtube-joiner"
+version = "0.1.0"
+description = "Download and merge multiple YouTube videos into a single video."
+authors = ["Randy Cahya Wihandika <rendicahya@gmail.com>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+click = "^8.1.8"
+pytubefix = "^8.12.1"
+moviepy = "^2.1.2"
+
+[tool.poetry.scripts]
+download = "youtube_joiner.download:download_videos"
+merge = "youtube_joiner.merge:merge_videos"
+info = "youtube_joiner.info:print_resolutions"
+playlist = "youtube_joiner.playlist2url:extract_urls"
+resize = "youtube_joiner.resize:resize_video"
+list = "youtube_joiner.list_videos:list_videos"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
